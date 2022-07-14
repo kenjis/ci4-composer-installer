@@ -10,6 +10,7 @@ You can install previous versions of [CodeIgniter 4 app starter](https://github.
 $ php ci4-install.php <dir> <version>
 ```
 
+The following command installs CodeIgniter 4.1.9:
 ```console
 $ php ci4-install.php ci4app 4.1.9
 ```
