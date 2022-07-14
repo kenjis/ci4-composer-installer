@@ -24,6 +24,9 @@ You can do it manually according to [Upgrading From a Previous Version](https://
 
 But if you use [tatter/patches](https://github.com/tattersoftware/codeigniter4-patches), it is easier.
 
+> **Note**
+> **tatter/patches** is a shell script. So you need Unix Shell to run it.
+
 ### Example: from v4.1.9 to v4.2.1
 
 Commit uncommitted changes in Git:
