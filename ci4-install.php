@@ -15,16 +15,16 @@ $dir = $argv[1];
 $version = $argv[2];
 
 $command = 'composer create-project codeigniter4/appstarter:' . $version . ' ' . $dir;
-echo $command . PHP_EOL;
+echo '[ci4-install] ' . $command . PHP_EOL;
 passthru($command);
 
 chdir($dir);
 
 $command = 'composer require -W codeigniter4/framework:' . $version;
-echo $command . PHP_EOL;
+echo '[ci4-install] ' . $command . PHP_EOL;
 passthru($command);
 
-echo 'update "codeigniter4/framework" version in composer.json'. PHP_EOL;
+echo '[ci4-install] ' . 'update "codeigniter4/framework" version in composer.json'. PHP_EOL;
 $composerJsonPath = "composer.json";
 $composerJson = file_get_contents($composerJsonPath);
 $newComposerJson = preg_replace(
