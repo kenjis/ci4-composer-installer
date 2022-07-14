@@ -37,14 +37,6 @@ Install "tatter/patches":
 $ composer require --dev tatter/patches
 ```
 
-Modify the framework version in `composer.json`:
-```
-    "require": {
-        ...
-        "codeigniter4/framework": "^4.2"
-    },
-```
-
 Commit uncommitted changes in Git:
 ```console
 $ git add -u
