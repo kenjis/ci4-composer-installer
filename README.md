@@ -22,7 +22,7 @@ If you want to upgrade the older version of CI4 that you installed, you may need
 
 You can do it manually according to [Upgrading From a Previous Version](https://codeigniter4.github.io/CodeIgniter4/installation/upgrading.html).
 
-But if you use [tatter/patches](https://github.com/tattersoftware/codeigniter4-patches) or [https://github.com/paulbalandan/liaison-revision](https://github.com/paulbalandan/liaison-revision), it is easier.
+But if you use [tatter/patches](https://github.com/tattersoftware/codeigniter4-patches) or [liaison/revision](https://github.com/paulbalandan/liaison-revision), it is easier.
 
 ### Tatter\Patches
 
