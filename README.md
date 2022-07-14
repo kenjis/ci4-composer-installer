@@ -92,7 +92,45 @@ $ php spark revision:update
 ```
 
 ```console
-...
+CodeIgniter v4.1.9 Command Line Tool - Server Time: 2022-07-14 18:47:54 UTC-05:00
+
+Liaison Revision
+Version: 1.1.0
+Run Date: Thu, 14 July 2022, 18:47:54 UTC-05:00
+
+Loaded configuration settings from: Liaison\Revision\Config\Revision.
++---------------------------+--------------------------------------------------------+
+| Setting                   | Value                                                  |
++---------------------------+--------------------------------------------------------+
+| Root Path                 | /.../ci4app/                                           |
+| Write Path                | /.../ci4app/writable/                                  |
+| Ignored Directories Count | 0                                                      |
+| Ignored Files Count       | 0                                                      |
+| Allow Gitignore Entry     | Allowed                                                |
+| Fall Through to Project   | Allowed                                                |
+| Maximum Retries           | 10                                                     |
+| Consolidator              | Liaison\Revision\Consolidation\DefaultConsolidator     |
+| Upgrader                  | Liaison\Revision\Upgrade\ComposerUpgrader              |
+| Pathfinder                | Liaison\Revision\Paths\DefaultPathfinder               |
+| Diff Output Builder       | SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder |
+| Log Handlers Count        | 2                                                      |
++---------------------------+--------------------------------------------------------+
+
+Starting software updates...
+
+Loading composer repositories with package information
+Updating dependencies
+Lock file operations: 0 installs, 1 update, 0 removals
+  - Upgrading codeigniter4/framework (v4.1.9 => v4.2.1)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 0 installs, 1 update, 0 removals
+  - Upgrading codeigniter4/framework (v4.1.9 => v4.2.1): Extracting archive
+Generating autoload files
+32 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+infection/extension-installer: No extensions found
+
 Found 27 files to consolidate.
 [p] Proceed.
 [l] List all files to consolidate.
@@ -111,19 +149,67 @@ Found 1 file in conflict.
 [r] Resolve each conflict.
 [a] Abort.
 
-What shall I do? [l, o, b, s, r, a]: o
+What shall I do? [l, o, b, s, r, a]: l
+
++----------------------+----------+------+
+| File                 | Status   | Diff |
++----------------------+----------+------+
+| app/Config/Paths.php | Modified | 9    |
++----------------------+----------+------+
+
+
+
+Found 1 file in conflict.
+[l] List all files in conflict.
+[o] Overwrite all.
+[b] Create backup files then safely overwrite all.
+[s] Skip all.
+[r] Resolve each conflict.
+[a] Abort.
+
+What shall I do? [l, o, b, s, r, a]: r
+
+This file was modified from source and does not match with your file.
+app/Config/Paths.php
+
+[d] Display local modifications (diff).
+[o] Overwrite file in destination.
+[b] Safely overwrite file in destination.
+[s] Skip this file.
+[a] Abort.
+
+What shall I do? [d, o, b, s, a]: d
+
+Displaying diff for: app/Config/Paths.php
+--- Original
++++ New
+@@ -25,7 +25,7 @@
+      *
+      * @var string
+      */
+-    public $systemDirectory = __DIR__ . '/../../vendor/codeigniter4/framework/system';
++    public $systemDirectory = __DIR__ . '/../../system';
+ 
+     /**
+      * ---------------------------------------------------------------
+
+This file was modified from source and does not match with your file.
+app/Config/Paths.php
+
+[d] Display local modifications (diff).
+[o] Overwrite file in destination.
+[b] Safely overwrite file in destination.
+[s] Skip this file.
+[a] Abort.
+
+What shall I do? [d, o, b, s, a]: s
 
 
 Logs for this run can be found here:
-.../ci4app/writable/revision/logs/
+/.../ci4app/writable/revision/logs/
 
 Terminating: Application update was successful.
-Software updates finished in 1.097 minutes.
-```
-
-Restore `app/Config/Paths.php`:
-```console
-$ git restore app/Config/Paths.php
+Software updates finished in 1.094 minutes.
 ```
 
 Check the diff:
