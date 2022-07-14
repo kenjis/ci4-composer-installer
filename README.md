@@ -115,7 +115,7 @@ What shall I do? [l, o, b, s, r, a]: o
 
 
 Logs for this run can be found here:
-/Users/kenji/tmp/ci4app/writable/revision/logs/
+.../ci4app/writable/revision/logs/
 
 Terminating: Application update was successful.
 Software updates finished in 1.097 minutes.
