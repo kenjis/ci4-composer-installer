@@ -54,6 +54,75 @@ Run "tatter/patches":
 $ vendor/bin/patch
 ```
 
+```console
+git version 2.35.3
+Composer version 2.3.9 2022-07-05 16:52:11
+************************************
+*          CONFIGURATION           *
+************************************
+
+Scripts Directory: /.../ci4app/vendor/tatter/patches/src
+Project Directory: /.../ci4app
+Target Version:    
+Current Version:   
+Source Package:    codeigniter4/framework
+Base Branch:       main
+Selected Items:    app/ public/ env spark
+
+************************************
+*             STAGING              *
+************************************
+
+Switched to a new branch 'tatter/scratch'
+Loading composer repositories with package information
+Updating dependencies
+Lock file operations: 0 installs, 1 update, 0 removals
+  - Upgrading codeigniter4/framework (v4.1.9 => v4.2.1)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 0 installs, 1 update, 0 removals
+  - Upgrading codeigniter4/framework (v4.1.9 => v4.2.1): Extracting archive
+Generating autoload files
+28 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+infection/extension-installer: No extensions found
+[tatter/scratch d16f2e5] Patch framework
+ 26 files changed, 1330 insertions(+), 1223 deletions(-)
+ rewrite Views/errors/html/debug.css (79%)
+ rewrite Views/errors/html/debug.js (90%)
+ rewrite Views/errors/html/error_404.php (95%)
+ rewrite Views/errors/html/error_exception.php (82%)
+ rewrite Views/errors/html/production.php (84%)
+ rewrite Views/welcome_message.php (97%)
+Switched to a new branch 'tatter/patches'
+Installing dependencies from lock file (including require-dev)
+Verifying lock file contents can be installed on current platform.
+Package operations: 0 installs, 1 update, 0 removals
+  - Downgrading codeigniter4/framework (v4.2.1 => v4.1.9): Extracting archive
+Generating autoload files
+28 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+************************************
+*              MERGING             *
+************************************
+
+[tatter/patches c20e281] Patch framework
+ Date: Fri Jul 15 08:54:50 2022 +0900
+ 26 files changed, 1330 insertions(+), 1223 deletions(-)
+ rewrite app/Views/errors/html/debug.css (79%)
+ rewrite app/Views/errors/html/debug.js (90%)
+ rewrite app/Views/errors/html/error_404.php (95%)
+ rewrite app/Views/errors/html/error_exception.php (82%)
+ rewrite app/Views/errors/html/production.php (84%)
+ rewrite app/Views/welcome_message.php (97%)
+************************************
+*              SUCCESS             *
+************************************
+
+Patch successful! Updated files are available on branch tatter/patches.
+Deleted branch tatter/scratch (was d16f2e5).
+```
+
 Run "composer update":
 ```console
 $ composer update
