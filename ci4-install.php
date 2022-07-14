@@ -18,12 +18,14 @@ $command = 'composer create-project codeigniter4/appstarter:' . $version . ' ' .
 echo $command . PHP_EOL;
 passthru($command);
 
-$command = 'cd ' . $dir . '; composer require -W codeigniter4/framework:' . $version;
+chdir($dir);
+
+$command = 'composer require -W codeigniter4/framework:' . $version;
 echo $command . PHP_EOL;
 passthru($command);
 
 echo 'update "codeigniter4/framework" version in composer.json'. PHP_EOL;
-$composerJsonPath = "$dir/composer.json";
+$composerJsonPath = "composer.json";
 $composerJson = file_get_contents($composerJsonPath);
 $newComposerJson = preg_replace(
     '!"codeigniter4/framework": ".*?"!',
