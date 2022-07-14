@@ -14,11 +14,11 @@ if ($argc < 3) {
 $dir = $argv[1];
 $version = $argv[2];
 
-$command = 'composer create-project codeigniter4/appstarter:v' . $version . ' ' . $dir;
+$command = 'composer create-project codeigniter4/appstarter:' . $version . ' ' . $dir;
 echo $command . PHP_EOL;
 passthru($command);
 
-$command = 'cd ' . $dir . '; composer require -W codeigniter4/framework:v' . $version;
+$command = 'cd ' . $dir . '; composer require -W codeigniter4/framework:' . $version;
 echo $command . PHP_EOL;
 passthru($command);
 
