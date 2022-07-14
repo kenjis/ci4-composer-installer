@@ -14,3 +14,49 @@ The following command installs CodeIgniter 4.1.9:
 ```console
 $ php ci4-install.php ci4app 4.1.9
 ```
+
+## Upgrading CodeIgniter4
+
+If you want to upgrade the older version of CI4 that you installed, you may need to upgrade Project Files (files in other than `system` folder).
+
+You can do it manually according to [Upgrading From a Previous Version](https://codeigniter4.github.io/CodeIgniter4/installation/upgrading.html).
+
+But if you use [tatter/patches](https://github.com/tattersoftware/codeigniter4-patches), it is easier.
+
+### Example: from v4.1.9 to v4.2.1
+
+Commit uncommitted changes in Git:
+```console
+$ git init
+$ git add .
+$ git commit -m "CodeIgniter 4.1.9"
+```
+
+Install "tatter/patches":
+```console
+$ composer require --dev tatter/patches
+```
+
+Modify the framework version in `composer.json`:
+```
+    "require": {
+        ...
+        "codeigniter4/framework": "^4.2"
+    },
+```
+
+Commit uncommitted changes in Git:
+```console
+$ git add -u
+$ git commit -m "add tatter/patches"
+```
+
+Run "tatter/patches":
+```console
+$ vendor/bin/patch
+```
+
+Run "composer update":
+```console
+$ composer update
+```
