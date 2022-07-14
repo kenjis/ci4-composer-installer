@@ -56,3 +56,8 @@ Run "composer update":
 ```console
 $ composer update
 ```
+
+Check the diff:
+```console
+$ git diff main...tatter/patches
+```
