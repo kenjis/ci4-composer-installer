@@ -1,10 +1,10 @@
 #!/usr/bin/env php
 <?php
 
-if ($argc < 3) {
+if ($argc < 2) {
     file_put_contents(
         'php://stderr',
-        'Usage: php ci4-install.php <directory> <version>' . PHP_EOL
+        'Usage: php ci4-install.php <directory> [<version>]' . PHP_EOL
         . '   Eg: php ci4-install.php ci4app 4.1.9' . PHP_EOL
     );
 
@@ -12,6 +12,16 @@ if ($argc < 3) {
 }
 
 $dir = $argv[1];
+
+// install the latest version
+if ($argc === 2) {
+    $command = 'composer create-project codeigniter4/appstarter ' . $dir;
+    echo '[ci4-install] ' . $command . PHP_EOL;
+    passthru($command);
+
+    exit(0);
+}
+
 $version = $argv[2];
 
 $command = 'composer create-project codeigniter4/appstarter:' . $version . ' ' . $dir;
