@@ -67,12 +67,17 @@ chdir($dir);
 $command = ['composer', 'require', '-W', 'codeigniter4/framework:' . $version];
 runCommand($command);
 
-echo '[ci4-install] ' . 'update "codeigniter4/framework" version in composer.json' . PHP_EOL;
-$composerJsonPath = "composer.json";
-$composerJson = file_get_contents($composerJsonPath);
-$newComposerJson = preg_replace(
-    '!"codeigniter4/framework": ".*?"!',
-    '"codeigniter4/framework": "^' . $version . '"',
-    $composerJson
-);
-file_put_contents($composerJsonPath, $newComposerJson);
+updateFrameworkVersion($version);
+
+function updateFrameworkVersion(string $version): void
+{
+    echo '[ci4-install] ' . 'update "codeigniter4/framework" version in composer.json' . PHP_EOL;
+    $composerJsonPath = "composer.json";
+    $composerJson = file_get_contents($composerJsonPath);
+    $newComposerJson = preg_replace(
+        '!"codeigniter4/framework": ".*?"!',
+        '"codeigniter4/framework": "^' . $version . '"',
+        $composerJson
+    );
+    file_put_contents($composerJsonPath, $newComposerJson);
+}
