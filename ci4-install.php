@@ -26,7 +26,7 @@ function runCommand(array $command): void
 
     if (! is_resource($process)) {
         throw new RuntimeException(
-            'Cannot execute command: "' . implode(' ', $command). '"'
+            'Cannot execute command: "' . implode(' ', $command) . '"'
         );
     }
 
@@ -59,15 +59,15 @@ if ($argc === 2) {
 // install the specific version
 $version = $argv[2];
 
-$command = ['composer', 'create-project', 'codeigniter4/appstarter:'.$version, $dir];
+$command = ['composer', 'create-project', 'codeigniter4/appstarter:' . $version, $dir];
 runCommand($command);
 
 chdir($dir);
 
-$command = ['composer', 'require', '-W', 'codeigniter4/framework:'. $version];
+$command = ['composer', 'require', '-W', 'codeigniter4/framework:' . $version];
 runCommand($command);
 
-echo '[ci4-install] ' . 'update "codeigniter4/framework" version in composer.json'. PHP_EOL;
+echo '[ci4-install] ' . 'update "codeigniter4/framework" version in composer.json' . PHP_EOL;
 $composerJsonPath = "composer.json";
 $composerJson = file_get_contents($composerJsonPath);
 $newComposerJson = preg_replace(
