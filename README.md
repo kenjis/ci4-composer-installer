@@ -293,6 +293,7 @@ $ git diff
 > This requires Unix shell.
 
 ```console
+$ cd /path/to/ci4/project
 $ php ci4-update.php <branch>
 ```
 
