@@ -5,7 +5,7 @@ You can install previous versions of [CodeIgniter 4 app starter](https://github.
 > **Warning**
 > Many of the older versions of CI4 have active [Security Advisories](https://github.com/codeigniter4/CodeIgniter4/security/advisories). So do not use them in a production environment.
 
-## Usage
+## Installing CodeIgniter4
 
 ```console
 $ php ci4-install.php <dir> [<version>]
@@ -285,3 +285,19 @@ Check the diff:
 ```console
 $ git diff
 ```
+
+## Upgrading CodeIgniter4 to next version branch
+
+> **Note**
+> This requires Unix shell.
+
+```console
+$ php ci4-update.php <branch>
+```
+
+The following command updates CodeIgniter to `4.3` branch:
+```console
+$ php ci4-update.php 4.3.x-dev
+```
+
+This command fails due to a conflict. You need to resolve the conflict and complete git cherry-pick.
