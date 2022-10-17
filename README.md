@@ -300,8 +300,14 @@ $ git diff
 > **Note**
 > This requires Unix shell.
 
+Before running this command, you need to commit all the changes:
 ```console
 $ cd /path/to/ci4/project
+$ git add -u
+$ git commit
+```
+
+```console
 $ php ci4-update.php <branch>
 ```
 
