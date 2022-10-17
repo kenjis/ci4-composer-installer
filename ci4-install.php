@@ -71,21 +71,14 @@ $dir = $argv[1];
 
 // install the latest version
 if ($argc === 2) {
-    $command = ['composer', 'create-project', 'codeigniter4/appstarter', $dir];
-    runCommand($command);
+    runCommand(['composer', 'create-project', 'codeigniter4/appstarter', $dir]);
 
     exit(0);
 }
 
 // install the specific version
 $version = $argv[2];
-
-$command = ['composer', 'create-project', 'codeigniter4/appstarter:' . $version, $dir];
-runCommand($command);
-
+runCommand(['composer', 'create-project', 'codeigniter4/appstarter:' . $version, $dir]);
 chdir($dir);
-
-$command = ['composer', 'require', '-W', 'codeigniter4/framework:' . $version];
-runCommand($command);
-
+runCommand(['composer', 'require', '-W', 'codeigniter4/framework:' . $version]);
 updateFrameworkVersion($version);
