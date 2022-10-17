@@ -1,10 +1,18 @@
-# CodeIgniter4 Composer Installer
+# CodeIgniter4 Composer Installer <!-- omit in toc -->
 
 - You can install previous versions of [CodeIgniter 4 app starter](https://github.com/codeigniter4/appstarter).
 - You can upgrade CodeIgniter4 to next version branch.
 
 > **Warning**
 > Many of the older versions of CI4 have active [Security Advisories](https://github.com/codeigniter4/CodeIgniter4/security/advisories). So do not use them in a production environment.
+
+- [Installing CodeIgniter4](#installing-codeigniter4)
+- [Upgrading CodeIgniter4](#upgrading-codeigniter4)
+  - [Tatter\Patches](#tatterpatches)
+    - [Example: from v4.1.9 to v4.2.1 by Patches](#example-from-v419-to-v421-by-patches)
+  - [Liaison Revision](#liaison-revision)
+    - [Example: from v4.1.9 to v4.2.1 by Revision](#example-from-v419-to-v421-by-revision)
+- [Upgrading CodeIgniter4 to next version branch](#upgrading-codeigniter4-to-next-version-branch)
 
 ## Installing CodeIgniter4
 
