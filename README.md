@@ -1,6 +1,7 @@
 # CodeIgniter4 Composer Installer
 
-You can install previous versions of [CodeIgniter 4 app starter](https://github.com/codeigniter4/appstarter).
+- You can install previous versions of [CodeIgniter 4 app starter](https://github.com/codeigniter4/appstarter).
+- You can upgrade CodeIgniter4 to next version branch.
 
 > **Warning**
 > Many of the older versions of CI4 have active [Security Advisories](https://github.com/codeigniter4/CodeIgniter4/security/advisories). So do not use them in a production environment.
