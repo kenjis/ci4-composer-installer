@@ -106,7 +106,7 @@ try {
     echo $e->getMessage() . PHP_EOL;
     echo 'After resolving the conflict in "app/Config/Paths.php", run "git cherry-pick --continue".';
     echo PHP_EOL;
-    echo ' And run "composer update", and check the diff: "git diff main...tatter/patches".';
+    echo 'And run "composer update", and check the diff: "git diff main...tatter/patches".';
     echo PHP_EOL;
     exit($e->getCode());
 }
